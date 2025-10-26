@@ -1,0 +1,142 @@
+.bg img {
+    max-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    filter: brightness(60%) blur(1px);
+}
+
+.pointlesslist {
+    list-style: none;
+
+}
+
+.bilde {
+    width: 40%;
+    border: rgb(204, 175, 101) 5px solid;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 2%;
+    transition: all 0.5s;
+}
+
+.bilde:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    margin-left: 6%;
+}
+
+.overskrift {
+    margin-bottom: 10vh;
+    border: rgb(124, 103, 67) solid 3px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    width: 40%;
+    height: 13vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15vh;
+    transition: all 0.5s;
+}
+
+.overskrift:hover {
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+
+.intro {
+    margin-bottom: 40vh;
+    border: rgb(124, 103, 67) solid 3px;
+    border-radius: 20px;
+    width: 66%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 28px;
+    padding: 20px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.intro:hover {
+    transform: scale(1.05);
+    transition: 0.4s;
+    transition: all 0.5s;
+}
+
+.sport {
+    margin-bottom: 50vh;
+    border: rgb(124, 103, 67) solid 3px;
+    border-radius: 20px;
+    width: 66%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 28px;
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.sport p {
+    width: 60%;
+    line-height: 40px;
+}
+
+.sport:hover {
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+
+.skole {
+    margin-bottom: 50vh;
+    border: rgb(124, 103, 67) solid 3px;
+    border-radius: 20px;
+    width: 66%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 28px;
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.skole p {
+    width: 60%;
+    line-height: 40px;
+}
+
+.skole:hover {
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+
+.bildegalleri {
+    margin-bottom: 50vh;
+    border: rgb(124, 103, 67) solid 3px;
+    border-radius: 20px;
+    width: 66%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 28px;
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.bildegalleri p {
+    width: 60%;
+    line-height: 40px;
+}
+
+.bildegalleri:hover {
+    transform: scale(1.05);
+    transition: 0.4s;
+}

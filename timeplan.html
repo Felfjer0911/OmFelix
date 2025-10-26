@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeplan.no</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="universal.css">
+    <link rel="stylesheet" href="timeplan.css">
+    <link rel="stylesheet" href="farger.css">
+</head>
+
+<body>
+    <header>
+        <div class="home"><a href="hoved.html"><img src="bilder/home.png" alt=""></a> </div>
+        <div class="nav">
+            <a href="timeplan.html">Timeplan</a>
+            <a href="fritidsaktiviteter.html">Fritidsaktiviteter</a>
+            <a href="bildegalleri.html">Bildegalleri</a>
+        </div>
+    </header>
+    <main class="elfenbenwhite ntext">
+
+        <section class="overskrift1">
+            <h1>Min timeplan!</h1>
+        </section>
+        <section class="intro">
+            <p>
+                Dette er min timeplan på nadderud VGs på studiespesialiseringslinjen. Timeplannen min endrer seg frem og
+                tilbake annen hver uke. Trykk på knappen for å BYTTE UKE!
+            </p>
+        </section>
+        <section>
+            <div class="button">
+                <button onclick=endreUke()>
+                    Endre Uke!
+                </button>
+            </div>
+
+
+            <div id="timeplanContainer">
+
+            </div>
+
+            <script>
+                const partallHTML = `
+                    <div class="uke"><h2>Partalls-uke:</h2></div>
+                    <table class="ruter partall">
+                        <tr class="toptext">
+                            <td> kl.</td>
+                            <td>
+                                Mandag
+                            </td>
+                            <td>
+                                tirsdag
+                            </td>
+                            <td>
+                                onsdag
+                            </td>
+                            <td>
+                                torsdag
+                            </td>
+                            <td>
+                                fredag
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tid_c">
+                                08:15-09:50
+                            </td>
+
+                            <td class="math_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            B105
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            Matematikk R2
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Farhan Omar
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            
+                            <td class="fri_c">
+
+                            </td>
+                            <td class="French_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            D103
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            Fransk II
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Anne-Gro Høyer-Trollnes
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="math_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            B105
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            Matematikk R2
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Farhan Omar
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="kjemi_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            kjemi
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            kjemi I
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Erik Glesne 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tid_c">
+                                10:00 - 11:35
+                            </td>
+                            <td class="kjemi_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            kjemi
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            kjemi I
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Erik Glesne 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="fysikk_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            Fysikk
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            Fysikk I
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            iryna Karpenka 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="history_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            Biologi
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            Historie
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Vegar Pleym 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="norsk_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            D202
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            Norsk, skriftelig
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Guro Andersen 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="IT_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            B105
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            informasjonsteknoligi 1
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Rasmus Moseskjær Graver
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tid_c">11:35-12:20(12:05 fredag)</td>
+                            <td class="spisng_c"></td>
+                            <td class="spisng_c"></td>
+                            <td class="spisng_c"></td>
+                            <td class="aktivitet_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            B203
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            studieverksted matematikk
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Rasmus Moseskjær Graver
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            aktivitet
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="spisng_c">
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tid_c">
+                                12:20-13:55 (12:05-13:40 fredag)
+                            </td>
+                            <td class="gym_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            B105
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            kroppsøving vg2
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Anders Petter Fleischer Magnryd
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="norsk_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            D202
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            Norsk, skriftelig
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Guro Andersen 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="IT_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            B105
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            informasjonsteknoligi 1
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Rasmus Moseskjær Graver
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="fysikk_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            Fysikk
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            Fysikk I
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            iryna Karpenka 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="French_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            D103
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            Fransk II
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Anne-Gro Høyer-Trollnes
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tid_c">14:05-15:40</td>
+                            <td class="fri_c">
+                                
+                            </td>
+                            <td class="math_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            B105
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            Matematikk R2
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Farhan Omar
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="fri_c">
+
+                            </td>
+                            <td class="fri_c">
+                                
+                            </td>
+                            <td class="fri_c">
+                                
+                            </td>
+                        </tr>
+                    </table>
+                `;
+
+                const oddetallHTML = `
+                    <div class="uke"><h2>Oddetalls-uke:</h2></div>
+                    <table class="ruter">
+                        <tr class="toptext">
+                            <td> kl.</td>
+                            <td>
+                                Mandag
+                            </td>
+                            <td>
+                                tirsdag
+                            </td>
+                            <td>
+                                onsdag
+                            </td>
+                            <td>
+                                torsdag
+                            </td>
+                            <td>
+                                fredag
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tid_c">
+                                08:15-09:50
+                            </td>
+
+                            <td class="IT_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            B105
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            informasjonsteknoligi 1
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Rasmus Moseskjær Graver
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            
+                            <td class="fri_c">
+
+                            </td>
+                            <td class="French_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            D103
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            Fransk II
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Anne-Gro Høyer-Trollnes
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="math_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            B105
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            Matematikk R2
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Farhan Omar
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="kjemi_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            kjemi
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            kjemi I
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Erik Glesne 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tid_c">
+                                10:00 - 11:35
+                            </td>
+                            <td class="kjemi_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            kjemi
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            kjemi I
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Erik Glesne 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="fysikk_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            Fysikk
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            Fysikk I
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            iryna Karpenka 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="history_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            Biologi
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            Historie
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Vegar Pleym 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="norsk_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            D202
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            Norsk, skriftelig
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Guro Andersen 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="IT_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            B105
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            informasjonsteknoligi 1
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Rasmus Moseskjær Graver
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tid_c">11:35-12:20(12:05 fredag)</td>
+                            <td class="spisng_c"></td>
+                            <td class="spisng_c"></td>
+                            <td class="spisng_c"></td>
+                            <td class="aktivitet_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            B203
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            studieverksted matematikk
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Rasmus Moseskjær Graver
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            aktivitet
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="spisng_c">
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tid_c">
+                                12:20-13:55 (12:05-13:40 fredag)
+                            </td>
+                            <td class="gym_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            B105
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            kroppsøving vg2
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Anders Petter Fleischer Magnryd
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="norsk_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            D202
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            Norsk, skriftelig
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Guro Andersen 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="IT_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            B105
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            informasjonsteknoligi 1
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Rasmus Moseskjær Graver
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="fysikk_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            Fysikk
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            Fysikk I
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            iryna Karpenka 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="French_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            D103
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            Fransk II
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Anne-Gro Høyer-Trollnes
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tid_c">14:05-15:40(13:50-15:25 fredag)</td>
+                            <td class="fysikk_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            Fysikk
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            Fysikk I
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            iryna Karpenka 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="math_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            B105
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            Matematikk R2
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Farhan Omar
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="fri_c">
+
+                            </td>
+                            <td class="kjemi_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            kjemi
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            kjemi I
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Erik Glesne 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            undervisningstime
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="aktivitet_c">
+                                <table class="timer litentext">
+                                    <tr>
+                                        <td>
+                                            c201
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="stortext">
+                                            2STA klassens time 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Vegar Pleym 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            aktivitet
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                `;
+
+
+                var partall = true;
+                document.getElementById('timeplanContainer').innerHTML = partallHTML;
+
+                function endreUke() {
+                    if (partall) {
+                        partall = false;
+                        document.getElementById('timeplanContainer').innerHTML = oddetallHTML;
+                    } else {
+                        partall = true;
+                        document.getElementById('timeplanContainer').innerHTML = partallHTML;
+                    }
+                }
+            </script>
+        </section>
+        <section class="why ntext graygreen">
+            <div class="overskrift elfenbenwhite">
+                <h2>Hvorfor jeg valgte disse fagene!</h2>
+            </div>
+            <div class="t-and-p">
+                <div class="fag">
+                    <div class="fransk graygreen">
+                        <h4>Fransk</h4>
+                        <p>Jeg valgte Fransk fordi jeg ofte drar til frankriket på ferie. Jeg synes også at det er et
+                            veldig
+                            interesant og gøy språk å lære seg. Det er også mange andre i familien min som har tatt
+                            fransk</p>
+                    </div>
+                    <div class="kjemi graygreen">
+                        <h4>kjemi</h4>
+                        <p>Jeg valgte kjemi fordi jeg altid har vært god i kjemi. Jeg har kun fått toppkarakter i faget
+                            på
+                            ungdomskolen iog videregående. I tilleg er det veldig interesant å se på verden fra et så
+                            lite
+                            perspektiv</p>
+                    </div>
+                    <div class="IT1 graygreen">
+                        <h4>IT1</h4>
+                        <p>Jeg valgte IT1 fordi jeg altid har syntes programmering er gøy og synes det er viktig og
+                            lærerikt å
+                            kunne programere. Måten du må komunisere til programmet slik at den gjør som du vil (tenker
+                            mest på
+                            phyton) er en veldig lærerik opplevelse. I tilleg har jeg hørt at IT1 er et veldig gøy fag
+                            noe alla
+                            kunst og håndtværk</p>
+                    </div>
+                    <div class="R2 graygreen">
+                        <h4>Matematikk R2</h4>
+                        <p>Jeg valgte matematikk R2 fordi jeg er veldig god i matte og det var det neste stadige.</p>
+                    </div>
+                    <div class="fysikk graygreen">
+                        <h4>Fysikk I</h4>
+                        <p>Jeg valgte fysikk fordi jeg er god i matte og interesert i faget.</p>
+                    </div>
+                </div>
+
+                <div class="bilde"> <img src="bilder/fagvalg.png" alt=""></div>
+            </div>
+        </section>
+        <section class="y10">
+            <div class="y10text">
+                <p> 
+                    Dette er et bilde av meg om 10 år som bil ingengiør for formel 1 laget til ferrari!
+                </p>
+            </div>
+            <div class="y10img">
+                <img src="bilder/10years.PNG" alt="">
+            </div>
+
+        </section>
+
+        <div class="bottom">.</div>
+    </main>

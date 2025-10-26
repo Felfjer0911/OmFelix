@@ -1,0 +1,310 @@
+main {
+    background-color: rgb(245, 242, 235);
+}
+.overskrift1{
+    background-color: rgb(180, 190, 178);
+    color: rgb(245, 242, 235);
+    margin-bottom: 5vh;
+    border: rgb(124, 103, 67) solid 3px;
+    border-end-end-radius: 20px;
+    border-end-start-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    width: 50%;
+    height: 13vh;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.intro {
+    margin-bottom: 5vh;
+    border: rgb(124, 103, 67) solid 3px;
+    border-radius: 20px;
+    width: 66%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 28px;
+    padding: 20px;
+    text-align: center;
+    line-height: 40px;
+    background-color: rgb(180, 190, 178);
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5vh;
+    border: rgb(124, 103, 67) solid 3px;
+    border-radius: 20px;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 28px;
+    padding: 20px;
+    background-color: rgb(180, 190, 178);
+}
+button{
+    background-color: rgb(245, 242, 235);
+    height: 15vh;
+    width: 25vh;
+    font-size: x-large;
+    border-radius: 20px;
+    border-color: rgb(124, 103, 67);
+    transition: all 0.5s;
+}
+
+button:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+#timeplanContainer {
+    background-color: rgb(180, 190, 178);
+    margin-bottom: 10vh;
+    border: rgb(124, 103, 67) solid 3px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    width: 80%;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+
+}
+
+.uke {
+    color: rgb(245, 242, 235);
+    font-size: xx-large;
+    text-align: center;
+}
+
+.partall {
+    width: 96%;
+}
+
+.ruter {
+    margin-bottom: 10vh;
+    font-size: x-large;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+}
+
+.ruter td {
+    border: 2px black solid;
+    padding: 10px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.toptext td {
+    background-color: lightgray;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.timer td {
+    border: 0px white solid;
+    padding: 0;
+}
+
+.litentext {
+    font-size: 10px;
+    font-weight: lighter;
+    margin: 0px;
+
+}
+
+.stortext {
+    font-size: large;
+    color: black;
+    font-weight: bolder;
+}
+
+.why {
+    margin-bottom: 10vh;
+    border: rgb(124, 103, 67) solid 3px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    width: 80%;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15vh;
+
+}
+
+.overskrift {
+    margin-bottom: 5vh;
+    border: rgb(124, 103, 67) solid 3px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    width: 75%;
+    height: 13vh;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.t-and-p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fag {
+    border: rgb(124, 103, 67) solid 3px;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 30px;
+    background-color: rgb(245, 242, 235);
+    width: 60%;
+    line-height: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 2%;
+    transition: all 0.5s;
+}
+
+.fag:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+    margin-right: 5%;
+}
+
+.fransk {
+    border: rgb(124, 103, 67) solid 3px;
+    border-radius: 20px;
+    padding: 20px;
+    transition: all 0.5s;
+}
+
+.fransk:hover {
+    transform: scale(1.04);
+    transition: 0.5s;
+}
+
+.kjemi {
+    border: rgb(124, 103, 67) solid 3px;
+    border-radius: 20px;
+    padding: 20px;
+    transition: all 0.5s;
+}
+
+.kjemi:hover {
+    transform: scale(1.04);
+    transition: 0.5s;
+}
+
+.IT1 {
+    border: rgb(124, 103, 67) solid 3px;
+    border-radius: 20px;
+    padding: 20px;
+    transition: all 0.5s;
+}
+
+.IT1:hover {
+    transform: scale(1.04);
+    transition: 0.5s;
+}
+
+.R2 {
+    border: rgb(124, 103, 67) solid 3px;
+    border-radius: 20px;
+    padding: 20px;
+    transition: all 0.5s;
+}
+
+.R2:hover {
+    transform: scale(1.04);
+    transition: 0.5s;
+}
+
+.fysikk {
+    border: rgb(124, 103, 67) solid 3px;
+    border-radius: 20px;
+    padding: 20px;
+    transition: all 0.5s;
+}
+
+.fysikk:hover {
+    transform: scale(1.04);
+    transition: 0.5s;
+}
+
+.bilde {
+    width: 40%;
+    margin-left: 2%;
+    transition: all 0.5s;
+}
+
+.bilde img {
+    border: rgb(124, 103, 67) solid 3px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.bilde:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+    margin-left: 5%;
+    margin-right: 2%;
+}
+.y10{
+    border: rgb(124, 103, 67) solid 3px;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 50px;
+    background-color: rgb(180, 190, 178);
+    width: 80%;
+    line-height: 40px;
+    gap: 10px;
+    margin-right: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 5vh;
+}
+.y10text{
+    border: rgb(124, 103, 67) solid 3px;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 50px;
+    background-color: rgb(245, 242, 235);
+    width: 60%;
+    line-height: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 2%;
+    font-size: x-large;
+}
+.y10img{
+    border: rgb(124, 103, 67) solid 3px;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+.y10img:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+    margin-left: 5%;
+    margin-right: 2%;
+}
+
+.bottom{
+    color: rgb(245, 242, 235);
+}

@@ -1,0 +1,98 @@
+.bg img {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    filter: brightness(60%) blur(1px);
+}
+
+.overskrift{
+    margin-bottom: 10vh;
+    border: rgb(124, 103, 67) solid 3px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    width: 50%;
+    height: 13vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(180, 190, 178);
+    color: rgb(245, 242, 235);
+}
+
+.intro {
+    margin-bottom: 20vh;
+    border: rgb(124, 103, 67) solid 3px;
+    border-radius: 20px;
+    width: 66%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 28px;
+    padding: 20px;
+    text-align: center;
+    line-height: 40px;
+    background-color: rgb(180, 190, 178);
+    transition: all 0.5s;
+}
+
+.intro:hover {
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+
+.bandy{
+    margin-bottom: 25vh;
+    border: rgb(124, 103, 67) solid 3px;
+    border-radius: 20px;
+    width: 66%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 28px;
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(180, 190, 178);
+    font-size: xx-large;
+    line-height: 40px;
+}
+
+.f1{
+    margin-bottom: 25vh;
+    border: rgb(124, 103, 67) solid 3px;
+    border-radius: 20px;
+    width: 66%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 28px;
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(180, 190, 178);
+    font-size: xx-large;
+    line-height: 40px;
+}
+
+.gitar{
+    margin-bottom: 15vh;
+    border: rgb(124, 103, 67) solid 3px;
+    border-radius: 20px;
+    width: 66%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 28px;
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(180, 190, 178);
+    font-size: xx-large;
+    line-height: 40px;
+}
